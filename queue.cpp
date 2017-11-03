@@ -108,9 +108,11 @@ void Queue<T>::invert()
 	unit * current = first;
 	unit * previous = NULL;
 	unit * temp;
+	last = current;
 	while (current!=NULL)
 	{
 		temp = current;
+		first = current;
 		current = current->next;
 		temp->next = previous;
 		previous = temp;

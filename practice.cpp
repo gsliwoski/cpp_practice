@@ -30,6 +30,8 @@ int main()
 	for (int i = 0; i<4; i++)
 		strq.enqueue(strings[i]);
 	string curst;
+	cout << "inverting string queue\n";
+	strq.invert();
 	while (strq.dequeue(curst))
 	{
 		cout << "dequeued from strq: " << curst << "\n";

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "queue.cpp"
+#include "stack.cpp"
 int main()
 {
 	using std::cout;
@@ -36,5 +37,22 @@ int main()
 	{
 		cout << "dequeued from strq: " << curst << "\n";
 	}
+	
+	cout << "\n----Stack----\n";
+	Stack<int> intst(3);
+	Stack<string> strs;
+	cout << "filling int stack (up to 3)\n";
+	for (int i=0; i<5; i++)
+		intst.push(ints[i]);
+	cout << "filling string stack\n";
+	for (int i=0; i<4; i++)
+		strs.push(strings[i]);
+	cout << "popping int stack\n";	
+	while (intst.pop(curint))
+		cout << "popped " << curint << "\n";
+	cout << "popping string stack\n";
+	while (strs.pop(curst))
+		cout << "popped " << curst << "\n";
+	
 	return 0;
 }		
